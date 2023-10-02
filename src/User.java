@@ -109,4 +109,18 @@ public class User {
     public void setHighBMI(Double highBMI) {
         this.highBMI = highBMI;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "Name='" + Name + '\'' +
+                ", Gender='" + Gender + '\'' +
+                ", Age=" + Age +
+                ", Height=" + Height +
+                ", Weight=" + Weight +
+                ", IMC=" + IMC +
+                ", LowBMI=" + LowBMI +
+                ", highBMI=" + highBMI +
+                '}';
+    }
 }

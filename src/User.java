@@ -134,5 +134,64 @@ public class User {
         int dif = Math.abs (user1.getAge() - user2.getAge());
 
         return  dif;
+
+    }
+    /**
+     *
+     * @param user
+     * @return User IMC(BMI)
+     */
+    public Double CalculateIMC (User user){
+        user.IMC = user.getWeight()/ (user.getHeight()*user.getHeight()) ;
+        return IMC;
+    }
+
+    /**
+     *
+     * @param user
+     * @return the Degree of Obisity of the user
+     */
+    public int calculateDegreeOfObesity(User user){
+        Double BMI = user.getIMC();
+
+        if (BMI > 25) {
+            System.out.println("Obese");
+            return 3;
+        } else if (18 > BMI) {
+            System.out.println("Skinny");
+            return 1;
+        } else {
+            System.out.println("Healthy");
+            return 2;
+        }
+    }
+
+    /**
+     * Checks if an user is Healthy
+     * @param user
+     */
+    public void checkHealthy(User user){
+        if(calculateDegreeOfObesity(user) == 2){
+            System.out.println("User is Healthy");
+        }else{
+            System.out.println("User is not Healthy");
+        }
+    }
+
+    /**
+     * checks the younger of 2 users
+     * @param user1
+     * @param user2
+     */
+    public void youngerUser (User user1, User user2){
+        if(AgeDif(user1,user2) == 0){
+            System.out.println("Users have the same age");
+        }else{
+            if(user1.getAge() > user2.getAge()){
+                System.out.println(user2.getName() + "is the youngest");
+            }else{
+                System.out.println(user1.getName() + "is the youngest");
+            }
+        }
     }
 }

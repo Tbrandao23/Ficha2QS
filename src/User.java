@@ -123,4 +123,16 @@ public class User {
                 ", highBMI=" + highBMI +
                 '}';
     }
+
+    /**
+     * Method that returns the age difference between two Users
+     * @param user1
+     * @param user2
+     * @return the difference between two Users
+     */
+    public int AgeDif (User user1, User user2){
+        int dif = Math.abs (user1.getAge() - user2.getAge());
+
+        return  dif;
+    }
 }

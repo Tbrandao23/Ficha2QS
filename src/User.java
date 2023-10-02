@@ -179,7 +179,7 @@ public class User {
     }
 
     /**
-     * checks the younger of 2 users
+     * checks the younger of 2 user
      * @param user1
      * @param user2
      */
